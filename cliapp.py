@@ -74,13 +74,19 @@ class CliApp(object):
             iter = iter - 1
         return string_built
 
-app = CliApp()
-#app.guess_widths()
-test_list = ["Awesome"]
-iter = 6
-while iter > 0:
-    print(app.display_titles(test_list,":"))
-    print(app.display_line([str(x).replace("Awesome","Totally Rad") for x in test_list],"|"))
-    print("\n")
-    test_list.append("Awesome")
-    iter = iter - 1
+
+if __name__ == "__main__":
+    """
+    Demonstration Application
+    """
+
+    app = CliApp()
+    #app.guess_widths()
+    test_list = ["Awesome"]
+    iter = 6
+    while iter > 0:
+        print(app.display_titles(test_list,":"))
+        print(app.display_line([str(x).replace("Awesome","Totally Rad") for x in test_list],"|"))
+        print("\n")
+        test_list.append("Awesome")
+        iter = iter - 1
