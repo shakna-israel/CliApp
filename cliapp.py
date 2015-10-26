@@ -76,10 +76,11 @@ class CliApp(object):
 
 app = CliApp()
 #app.guess_widths()
-test_list = ["This"]
-iter = 10
+test_list = ["Awesome"]
+iter = 6
 while iter > 0:
-    print(app.display_titles(test_list,"|"))
-    test_list.append("This")
+    print(app.display_titles(test_list,":"))
+    print(app.display_line([str(x).replace("Awesome","Totally Rad") for x in test_list],"|"))
+    print("\n")
+    test_list.append("Awesome")
     iter = iter - 1
-print(app.display_line(["Hu","Man"],"|"))
